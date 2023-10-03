@@ -1,0 +1,160 @@
+mkdir lab0
+cd ./lab0
+#1
+echo Задание 1
+touch chikorita4
+echo chikorita4
+echo Тип покемона  GRASS NONE >> chikorita4
+cat chikorita4
+mkdir noctowl0
+cd noctowl0
+touch lampent
+echo lampent
+echo Возможности  Overland=1 >> lampent
+echo Sky=7 Jump=1 Power=1 Intelligence=4 Phasing=0 Glow=0 Invisibility=0 >> lampent
+echo Firestarter=0 Heater=0 Shrinkable=0 Sinker=0 >> lampent
+cat lampent
+mkdir chimchar
+touch linoone
+echo linoone
+echo Способности >> linoone
+echo Tail Whip Headbutt Sand-Attack Odor Sleuth Mud Sport Fury Swipes Covet >> linoone
+echo Bestow Slash Rest Belly Drum Fling >> linoone
+cat linoone
+mkdir raticate
+ls
+cd ..
+touch pidgeot
+mv pidgeot pidgeot8
+echo pidgeot8
+echo Возможности  Overland=6 >> pidgeot8
+echo Surface=1 Sky=14 Jump=3 Power4=0 Intelligence=4 >> pidgeot8
+echo Guster=0 >> pidgeot8
+cat pidgeot8
+ls
+mkdir rapidash6
+cd rapidash6
+mkdir wurmple
+mkdir foongus
+touch clefairy
+echo clefairy
+echo Возможности  Overland=6 Surface=3 Jump=4 Power=2 >> clefairy
+echo Intelligence=3 >> clefairy
+cd ..
+touch surskit9
+echo surskit9
+echo Возможности  Overland=5 Surface=6 Jump=2 >> surskit9
+echo Power=1 Intelligence=3 Threaded=0 >> surskit9
+cat surskit9
+mkdir timburr3
+cd timburr3
+mkdir hippowdon
+mkdir azurill
+mkdir whismur
+touch shuppet
+echo shuppet
+echo Ходы  Body Slam Dark Pulse>> shuppet
+echo Double-Edge Foul Play Icy Wind Knock Off Magic Coat Magic Room Ominous >> shuppet
+echo Wind Pain Split Role Play Shock Wave Skill Swap Sleep Talk Snore Spite >> shuppet
+echo Sucker Punch Trick >> shuppet
+cat shuppet
+touch lombre
+echo lombre
+echo weight=71.7 height=47.0 atk=5 def=5 >> lombre
+cat lombre
+cd ..
+ls -lR
+#2
+echo Задание 2
+chmod u=rw,g=w,o=  chikorita4
+cd noctowl0
+chmod u=r,g=r,o=r lampent
+chmod u=wx,g=wx,o=rx chimchar
+chmod 666 linoone
+chmod 355 raticate
+echo lab0/noctowl0
+ls -l
+echo
+cd ..
+chmod u=wx,g=rwx,o=rx noctowl0
+chmod u=rw,g=,o=r pidgeot8
+cd rapidash6
+chmod u=r,g=,o=r clefairy
+chmod u=rwx,g=rw,o=r foongus
+chmod u=rx,g=x,o=w wurmple
+echo lab0/rapidash6
+ls -l
+echo
+cd ..
+chmod u=wx,g=x,o=w rapidash6
+chmod 404 surskit9
+cd timburr3
+chmod 550 hippowdon
+chmod 664 shuppet
+chmod 357 azurill
+chmod u=wx,g=rw,o=x whismur
+chmod u=r,g=,o=r lombre
+echo lab0/timburr3
+ls -l
+echo
+cd ..
+chmod 771 timburr3
+echo lab0/
+ls -l
+echo
+#3
+echo Задание 3
+chmod 777 noctowl0
+chmod 777 noctowl0/chimchar
+chmod 777 noctowl0/raticate
+cp -R noctowl0 rapidash6/foongus
+chmod u=r,g=r,o=r noctowl0/lampent
+chmod u=wx,g=wx,o=rx noctowl0/chimchar
+chmod 666 noctowl0/linoone
+chmod 355 noctowl0/raticate
+ln -s ~/lab0/pidgeot8 ~/lab0/timburr3/lombrepidgeot
+ln -s ~/lab0/noctowl0 ~/lab0/Copy_40
+cat timburr3/shuppet rapidash6/clefairy >> chikorita4_48
+ln ~/lab0/surskit9 ~/lab0/timburr3/lombresurskit
+cp surskit9 timburr3/shuppetsurskit
+chmod 777 pidgeot8
+chmod 777 rapidash6/wurmple
+cp pidgeot8 rapidash6/wurmple
+chmod u=rw,g=,o=r pidgeot8
+chmod u=rx,g=x,o=w rapidash6/wurmple
+ls -lR
+#4
+echo Задание 4
+wc -l noctowl0/lampent noctowl0/linoone rapidash6/clefairy | sort -r 2>&1
+echo -----
+ls -lRt | grep ti | tail -2 2>&1
+echo -----
+cat -n noctowl0/linoone | sort -r 2>/tmp/err408693
+echo -----
+cat -n rapidash6/clefairy | sort -r 2>/tmp/err408693
+echo -----
+cat surskit9 | grep -v "Ma" 2>/tmp/err408693
+echo -----
+ls -lRtr | grep "r$"
+echo -----
+ls -lRt 2>/dev/null | grep "ri" | tail -3
+#5
+echo Задание 5
+ls -lR
+chmod 777 chikorita4
+rm chikorita4
+chmod 777 noctowl0/lampent
+rm noctowl0/lampent
+chmod 777 timburr3/lombrepidge*
+rm timburr3/lombrepidge*
+chmod 777 timburr3/lombresursk*
+rm timburr3/lombresursk*
+chmod -R 777 noctowl0
+rm -R noctowl0
+chmod 777 timburr3/azurill/
+rmdir timburr3/azurill/
+echo --------------
+echo ПОСЛЕ УДАЛЕНИЯ
+echo --------------
+ls -lR
+
